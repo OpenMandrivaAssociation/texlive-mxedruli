@@ -1,3 +1,9 @@
+# revision 15878
+# category Package
+# catalog-ctan /fonts/georgian/mxedruli
+# catalog-date 2009-01-23 11:09:06 +0100
+# catalog-license noinfo
+# catalog-version 3.3c
 Name:		texlive-mxedruli
 Version:	3.3c
 Release:	1
@@ -68,6 +74,7 @@ Mxedruli and the Xucuri alphabets.
 %doc %{_texmfdistdir}/doc/fonts/mxedruli/mxeddoc.tex
 %doc %{_texmfdistdir}/doc/fonts/mxedruli/ossetic.tex
 %doc %{_texmfdistdir}/doc/fonts/mxedruli/vepxis.tex
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -78,3 +85,5 @@ Mxedruli and the Xucuri alphabets.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar fonts tex doc %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
