@@ -6,7 +6,7 @@
 # catalog-version 3.3c
 Name:		texlive-mxedruli
 Version:	3.3c
-Release:	1
+Release:	2
 Summary:	A pair of Georgian fonts
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/fonts/georgian/mxedruli
