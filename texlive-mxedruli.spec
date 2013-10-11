@@ -1,16 +1,16 @@
-# revision 15878
+# revision 30021
 # category Package
 # catalog-ctan /fonts/georgian/mxedruli
-# catalog-date 2009-01-23 11:09:06 +0100
-# catalog-license noinfo
+# catalog-date 2013-04-18 13:20:04 +0200
+# catalog-license lppl
 # catalog-version 3.3c
 Name:		texlive-mxedruli
 Version:	3.3c
-Release:	2
-Summary:	A pair of Georgian fonts
+Release:	3
+Summary:	A pair of fonts for different Georgian alphabets
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/fonts/georgian/mxedruli
-License:	NOINFO
+License:	LPPL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/mxedruli.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/mxedruli.doc.tar.xz
 BuildArch:	noarch
@@ -19,8 +19,8 @@ Requires(pre):	texlive-tlpkg
 Requires(post):	texlive-kpathsea
 
 %description
-Two Georgian fonts, written in MetaFont, which cover the
-Mxedruli and the Xucuri alphabets.
+Two Georgian fonts, in both Metafont and Type 1 formats, which
+cover the Mxedruli and the Xucuri alphabets.
 
 %post
     %{_sbindir}/texlive.post
@@ -32,6 +32,12 @@ Mxedruli and the Xucuri alphabets.
 
 #-----------------------------------------------------------------------
 %files
+%{_texmfdistdir}/fonts/afm/public/mxedruli/mxed10.afm
+%{_texmfdistdir}/fonts/afm/public/mxedruli/mxedbf10.afm
+%{_texmfdistdir}/fonts/afm/public/mxedruli/mxedc10.afm
+%{_texmfdistdir}/fonts/afm/public/mxedruli/mxedi10.afm
+%{_texmfdistdir}/fonts/afm/public/mxedruli/xuc10.afm
+%{_texmfdistdir}/fonts/map/dvips/mxedruli/mxedruli.map
 %{_texmfdistdir}/fonts/source/public/mxedruli/mxed.mf
 %{_texmfdistdir}/fonts/source/public/mxedruli/mxed10.mf
 %{_texmfdistdir}/fonts/source/public/mxedruli/mxedacc.mf
@@ -55,6 +61,11 @@ Mxedruli and the Xucuri alphabets.
 %{_texmfdistdir}/fonts/tfm/public/mxedruli/mxedc10.tfm
 %{_texmfdistdir}/fonts/tfm/public/mxedruli/mxedi10.tfm
 %{_texmfdistdir}/fonts/tfm/public/mxedruli/xuc10.tfm
+%{_texmfdistdir}/fonts/type1/public/mxedruli/mxed10.pfb
+%{_texmfdistdir}/fonts/type1/public/mxedruli/mxedbf10.pfb
+%{_texmfdistdir}/fonts/type1/public/mxedruli/mxedc10.pfb
+%{_texmfdistdir}/fonts/type1/public/mxedruli/mxedi10.pfb
+%{_texmfdistdir}/fonts/type1/public/mxedruli/xuc10.pfb
 %{_texmfdistdir}/tex/latex/mxedruli/mxedruli.sty
 %{_texmfdistdir}/tex/latex/mxedruli/umxed.fd
 %{_texmfdistdir}/tex/latex/mxedruli/uxuc.fd
@@ -75,17 +86,3 @@ Mxedruli and the Xucuri alphabets.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar fonts tex doc %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 3.3c-2
-+ Revision: 754242
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 3.3c-1
-+ Revision: 719095
-- texlive-mxedruli
-- texlive-mxedruli
-- texlive-mxedruli
-- texlive-mxedruli
-
