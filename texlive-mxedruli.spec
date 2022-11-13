@@ -1,18 +1,12 @@
-# revision 30021
-# category Package
-# catalog-ctan /fonts/georgian/mxedruli
-# catalog-date 2013-04-18 13:20:04 +0200
-# catalog-license lppl
-# catalog-version 3.3c
 Name:		texlive-mxedruli
-Version:	3.3c
-Release:	13
+Version:	30021
+Release:	1
 Summary:	A pair of fonts for different Georgian alphabets
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/fonts/georgian/mxedruli
 License:	LPPL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/mxedruli.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/mxedruli.doc.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/mxedruli.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/mxedruli.doc.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -23,12 +17,12 @@ Two Georgian fonts, in both Metafont and Type 1 formats, which
 cover the Mxedruli and the Xucuri alphabets.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -79,7 +73,7 @@ cover the Mxedruli and the Xucuri alphabets.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1
+%autosetup -p1 -c -a1
 
 %build
 
