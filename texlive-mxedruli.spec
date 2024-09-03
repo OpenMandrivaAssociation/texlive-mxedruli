@@ -1,6 +1,6 @@
 Name:		texlive-mxedruli
-Version:	30021
-Release:	2
+Version:	71991
+Release:	1
 Summary:	A pair of fonts for different Georgian alphabets
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/fonts/georgian/mxedruli
